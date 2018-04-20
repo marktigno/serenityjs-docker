@@ -6,7 +6,7 @@
   "scripts": {
     "clean": "rimraf target",
     "preprotractor": "webdriver-manager update --standalone",
-    "protractor": "protractor ./protractor.conf.js",
+    "protractor": "xvfb-run --server-args='-screen 0, 1920x1080x16' protractor ./protractor.conf.js",
     "pretest": "serenity update",
     "report": "serenity run",
     "test": "failsafe"
