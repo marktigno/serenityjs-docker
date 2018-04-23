@@ -1,6 +1,6 @@
 FROM centos:latest
 
-MAINTAINER "Mark Joseph R. Tigno"
+LABEL maintainer="Mark Joseph R. Tigno" email="markj_tigno@hotmail.com"
 
 RUN yum -y update; yum clean all; rm -rf /var/cache/yum
 RUN yum -y install wget
