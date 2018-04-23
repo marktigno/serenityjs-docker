@@ -1,0 +1,5 @@
+#!/bin/bash
+npm test
+npm run clean
+npm run protractor
+npm run report
