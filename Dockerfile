@@ -13,6 +13,7 @@ RUN yum -y install nodejs
 RUN yum -y install java-1.8.0-openjdk
 RUN yum -y install git
 RUN yum -y install xorg-x11-server-Xvfb
+RUN dbus-uuidgen > /etc/machine-id
 RUN yum clean all; rm -rf /var/cache/yum
 RUN mkdir -p /app
 WORKDIR /app
