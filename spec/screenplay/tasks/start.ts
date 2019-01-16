@@ -1,4 +1,4 @@
-import { Open, PerformsTasks, Task, step } from 'serenity-js/lib/screenplay-protractor';     // imports the @step
+import { Open, PerformsTasks, step, Task } from 'serenity-js/lib/screenplay-protractor';     // imports the @step
 
 import { AddATodoItem } from './add_a_todo_item';
 
@@ -12,7 +12,7 @@ export class Start implements Task {
     performAs(actor: PerformsTasks): PromiseLike<void> {
         return actor.attemptsTo(
             Open.browserOn('/examples/angularjs/'),
-            ...this.addAll(this.items)                          // ``...` is a spread operator,
+            ...this.addAll(this.items),                          // ``...` is a spread operator,
         );                                                      // which converts a list to vararg
     }
 

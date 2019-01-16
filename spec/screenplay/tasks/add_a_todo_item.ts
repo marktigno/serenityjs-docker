@@ -1,5 +1,5 @@
-import { Enter, PerformsTasks, Task, step } from 'serenity-js/lib/screenplay-protractor'; // imports the @step
 import { protractor } from 'protractor';
+import { Enter, PerformsTasks, Task, step } from 'serenity-js/lib/screenplay-protractor'; // imports the @step
 import { TodoList } from '../components/todo_list';
 
 export class AddATodoItem implements Task {
@@ -13,7 +13,7 @@ export class AddATodoItem implements Task {
         return actor.attemptsTo(
             Enter.theValue(this.itemName)
                 .into(TodoList.What_Needs_To_Be_Done)
-                .thenHit(protractor.Key.ENTER)
+                .thenHit(protractor.Key.ENTER),
         );
     }
 
